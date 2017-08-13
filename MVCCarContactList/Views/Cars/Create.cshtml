@@ -1,0 +1,24 @@
+﻿@model CarsCreateVM
+
+<div class="form-group">
+    <form asp-controller="Cars" asp-action="Create">
+        <label asp-for="Brand"></label>
+        <input asp-for="Brand" class="form-control"/>
+        <span asp-validation-for="Brand" class="validationSpan"></span>
+        <br />
+
+        <label asp-for="Doors"></label>
+        <input asp-for="Doors" class="form-control"/>
+        <span asp-validation-for="Doors" class="validationSpan"></span>
+        <br />
+
+        <label asp-for="TopSpeed"></label>
+        <input asp-for="TopSpeed" class="form-control"/>
+        <span asp-validation-for="TopSpeed" class="validationSpan"></span>
+
+        <br />
+        <br />
+        <input type="submit" value="Submit" class="btn btn-default"/>
+    </form>
+
+</div>

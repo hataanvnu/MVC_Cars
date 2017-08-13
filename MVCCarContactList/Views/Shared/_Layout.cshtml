@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Source+Sans+Pro" rel="stylesheet">
+
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <link href="~/myStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="header">
+            <img src="~/Logo.jpg" id="carsLogo" />
+        </div>
+
+        <div id="topMenu" class="banner">
+            <ul class="bannerLeft">
+                <li><a asp-controller="Cars" asp-action="Index">Index</a></li>
+                <li><a asp-controller="Cars" asp-action="Create">Create</a></li>
+            </ul>
+
+        </div>
+
+        <h1>@ViewBag.Title</h1>
+
+        @RenderBody()
+
+        <div id="footer" class="banner">
+            <p class="bannerLeft">&copy Johan Bissmark 2017</p>
+            <img src="~/car.jpg" class="bannerRight" />
+
+        </div>
+
+    </div>
+
+
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

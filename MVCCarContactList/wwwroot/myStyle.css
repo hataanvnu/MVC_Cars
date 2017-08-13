@@ -1,0 +1,101 @@
+﻿
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+
+    /*Färg-variabler*/
+    --base-color: #373638;
+    --primary-color: #ff4500;
+    --lighter-color: #ff581a;
+    --darker-color: #e63e00;
+    --contrast-color: #00af60;
+    --secondary-color1: #00c02c;
+    --secondary-color2: #fe1800;
+    --grey-color: #373638;
+}
+
+h1 {
+    font-family: 'Faster One', cursive;
+    font-size: 60px;
+    color: var(--grey-color);
+}
+
+#wrapper {
+    width: 62%;
+    margin: auto;
+}
+
+.validationSpan {
+    color: var(--lighter-color);
+}
+
+#header {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    border-radius: 5px 5px 0px 0px;
+}
+
+#carsLogo {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+/*------------ Menu ------------*/
+
+#topMenu li {
+    display: inline;
+    padding: 0px 20px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+
+    #topMenu li:hover {
+        padding: 5px 20px;
+        background-color: var(--lighter-color);
+        border: 2px solid var(--grey-color);
+        border-radius: 2px;
+    }
+
+    #topMenu li a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+/*-------- Footer -----------*/
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: inherit;
+}
+
+    #footer p {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+
+/*-------- Banner ------------ Basically the top menu and footer */
+
+.banner {
+    background-color: var(--base-color);
+    font-size: 20px;
+    color: white;
+    height: 28px;
+}
+
+.bannerLeft {
+    height: inherit;
+    display: inline;
+}
+
+.bannerRight {
+    height: inherit;
+    display: inline;
+    float: right;
+}

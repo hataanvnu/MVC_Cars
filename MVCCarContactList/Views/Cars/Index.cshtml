@@ -1,0 +1,15 @@
+﻿@model CarsIndexVM[]
+<h3>Here is a list of cars in the system:</h3>
+<ul>
+    @foreach (var item in Model)
+    {
+        if (item.ShowAsFast)
+        {
+            <li style="font-family: 'Faster One', cursive; font-size: 20px;">@item.Brand</li>
+        }
+        else
+        {
+            <li>@item.Brand</li>
+        }
+    }
+</ul>

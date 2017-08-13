@@ -1,0 +1,7 @@
+﻿Colors:
+	Base: #583ec7
+	Lighter: #8173bb
+	Darker: #29253C
+	Contrast: #6CC754
+
+	Grey: #373638
