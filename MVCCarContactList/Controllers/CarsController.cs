@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using MVCCarContactList.Models;
 using MVCCarContactList.Models.Entities;
 using MVCCarContactList.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,11 +29,26 @@ namespace MVCCarContactList.Controllers
             return View(context.ListCars());
         }
 
+        public IActionResult Details(int id)
+        {
+            ViewData["Title"] = "Details";
+            return View(context.GetDetailsById(id));
+        }
+
         [HttpGet]
         public IActionResult Create()
         {
+            var carsCreateVM = new CarsCreateVM();
+
+            carsCreateVM.NumDoors = new SelectListItem[]
+            {
+                new SelectListItem {Text = "3", Value = "3"},
+                new SelectListItem {Text = "4", Value = "4"},
+                new SelectListItem {Text = "5", Value = "5"},
+            };
+
             SetTitleForCreate();
-            return View();
+            return View(carsCreateVM);
         }
 
         [HttpPost]

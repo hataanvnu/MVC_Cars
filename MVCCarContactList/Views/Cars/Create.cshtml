@@ -8,7 +8,8 @@
         <br />
 
         <label asp-for="Doors"></label>
-        <input asp-for="Doors" class="form-control"/>
+        @*<input asp-for="Doors" class="form-control"/>*@
+        <select asp-for="Doors" asp-items="Model.NumDoors"></select>
         <span asp-validation-for="Doors" class="validationSpan"></span>
         <br />
 

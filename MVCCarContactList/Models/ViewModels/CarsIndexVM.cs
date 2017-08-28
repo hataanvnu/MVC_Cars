@@ -16,7 +16,9 @@ namespace MVCCarContactList.Models.ViewModels
         [Display(Name = "Car Brand")]
         public string Brand { get; set; }
 
-
         public bool ShowAsFast { get; set; }
+
+        public int Id { get; set; }
+
     }
 }

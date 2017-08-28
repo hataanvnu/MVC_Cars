@@ -32,8 +32,6 @@ namespace MVCCarContactList.Models.Entities
 
         }
 
-
-
         public CarsIndexVM[] ListCars()
         {
             var q = Car
@@ -41,9 +39,24 @@ namespace MVCCarContactList.Models.Entities
                 {
                     Brand = c.Brand,
                     ShowAsFast = c.TopSpeed >= 250,
+                    Id = c.Id,
                 });
 
             return q.ToArray();
+        }
+
+        public CarsDetailsVM GetDetailsById(int id)
+        {
+            var car = Car.FirstOrDefault(c => c.Id == id);
+
+            CarsDetailsVM carsDetailsVM = new CarsDetailsVM
+            {
+                Brand = car.Brand,
+                Doors = car.Doors,
+                TopSpeed = car.TopSpeed,
+            };
+
+            return carsDetailsVM;
         }
     }
 }

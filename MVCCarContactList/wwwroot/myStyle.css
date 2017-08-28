@@ -3,7 +3,6 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
-
     /*Färg-variabler*/
     --base-color: #373638;
     --primary-color: #ff4500;
@@ -41,8 +40,39 @@ h1 {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-
 }
+
+
+.fastCar {
+    color: orangered;
+    font-family: 'Faster One', cursive;
+    font-size: 20px;
+}
+
+
+#carList a {
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+    #carList a:hover, .fastCar:hover {
+        text-decoration: none;
+        color: var(--contrast-color);
+    }
+
+
+.backToStart {
+    display: block;
+    margin-top: 50px;
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+    .backToStart:hover {
+        color: var(--contrast-color);
+    }
+
+
 
 /*------------ Menu ------------*/
 
